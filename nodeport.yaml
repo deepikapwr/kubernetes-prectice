@@ -1,15 +1,14 @@
 apiVersion: v1
-Kind: Service
-Metadata:
-  name: mynodeport service
+kind: Service
+metadata:
+  name: node-service
   namespace: nd-1
-Spec:
-  type: NodePort
+spec:
   selector:
     yum: why
-  Ports:
-   - name: http
-      port: 80
-      targetPort: 8080
-      protocol: TCP
-      nodePort: 3000
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+    nodePort: 3023
