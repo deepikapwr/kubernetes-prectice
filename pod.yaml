@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: httpd-pod
   namespace: nd-1
+  labels:
+    yum: why
 spec:
   containers:
   - name: httpd-container
