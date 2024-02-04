@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  ClusterIP-svc
+spec:
+  selector:
+    app:  cluster
+  type:  ClusterIP
+  ports:
+  - name:  tomcat
+    port:  80
+    targetPort:  8080
