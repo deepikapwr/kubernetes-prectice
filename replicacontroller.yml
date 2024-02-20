@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: replica-containers
-          image:  tomcat
+          image: tomcat
           ports:
         - containerPort: 8080
 ---
@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name:  rc.svc
+  name:  rc-service
 spec:
   selector:
-    app:  rc
+    app: rc
   type:  NodePort
   ports:
   - name:  http
